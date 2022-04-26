@@ -37,4 +37,25 @@ public class Bullet : MonoBehaviour
             transform.position += this.transform.up * transformMovementSpeed * Time.deltaTime;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.gameObject.name);
+        if (collision.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+        }
+    }
+    
+
+    //void OnTriggerEnter2D(Collider2D otherCollider)
+    //{
+    //    Debug.Log(otherCollider.gameObject.name);
+    //    if (otherCollider.tag == "Enemy")
+    //    {
+    //        Destroy(otherCollider.gameObject);
+    //    }
+    //}
+
 }
+
