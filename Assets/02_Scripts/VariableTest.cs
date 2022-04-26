@@ -21,8 +21,8 @@ public class VariableTest : MonoBehaviour
         var temp1 = 1.5f;
         var temp2 = 1.25;
         var temp3 = 5;
-        var temp4 = true;
-        var temp5 = "Hallo Welt!";
+        // var temp4 = true;
+        //var temp5 = "Hallo Welt!";
         var temp6 = new int[2];
         temp6[0] = 1;
         temp6[1] = 2;
