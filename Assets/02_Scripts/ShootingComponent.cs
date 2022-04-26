@@ -17,7 +17,7 @@ public class ShootingComponent : MonoBehaviour
     void Update()
     {
         // If Space key is pressed
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             for (int i = 0; i < muzzles.Length; i++)
             {

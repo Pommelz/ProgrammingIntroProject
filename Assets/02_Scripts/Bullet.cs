@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -35,6 +36,14 @@ public class Bullet : MonoBehaviour
         {
             // Move to the right every frame
             transform.position += this.transform.up * transformMovementSpeed * Time.deltaTime;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("Enemy"))
+        {
+            Debug.Log("BAM ENEMY HIT!");
         }
     }
 }
