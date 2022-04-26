@@ -36,5 +36,18 @@ public class ShootingComponent : MonoBehaviour
                 }
             }
         }
+
+       
+        float xPosition = transform.position.x + Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        xPosition = Mathf.Clamp(xPosition, -9.5f, 9.5f);
+        
+       
+
+       float yPosition = transform.position.y + Input.GetAxis("Vertical") * speed * Time.deltaTime;
+       yPosition = Mathf.Clamp(yPosition, -9.5f, 9.5f);
+       Vector3 playerPosition = new Vector3(xPosition,yPosition, 0f);
+       transform.position = playerPosition;
+       
+
     }
 }
